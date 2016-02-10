@@ -19,6 +19,8 @@ class XfceFileManager(object):
         for item in items:
             path = dirname(item)
             filename = basename(item)
+            if filename == '':
+                filename = '.'
             self.interface.DisplayFolderAndSelect(path, filename, '', '')
 
     def ShowItemProperties(self, items):
